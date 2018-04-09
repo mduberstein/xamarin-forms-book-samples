@@ -14,7 +14,7 @@ namespace GreetingsSap
 
 #if __IOS__
 
-        Padding = new Thickness(0, 20, 0, 0);
+        Padding = new Thickness(0, 40, 0, 0);
 
 #endif
         }
