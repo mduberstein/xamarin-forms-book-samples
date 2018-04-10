@@ -20,7 +20,7 @@ namespace VariableFormattedText
                         new Span
                         {
                             Text = "love",
-                            FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                             FontAttributes = FontAttributes.Bold
                         },
                         new Span
