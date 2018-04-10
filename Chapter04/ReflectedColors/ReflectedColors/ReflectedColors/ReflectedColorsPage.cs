@@ -8,7 +8,12 @@ namespace ReflectedColors
     {
         public ReflectedColorsPage()
         {
-            StackLayout stackLayout = new StackLayout();
+            StackLayout stackLayout = new StackLayout()
+            {
+                BackgroundColor = Color.Blue,
+                // Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.Start
+            };
 
             // Loop through the Color structure fields.
             foreach (FieldInfo info in typeof(Color).GetRuntimeFields())
@@ -45,7 +50,9 @@ namespace ReflectedColors
             // Put the StackLayout in a ScrollView.
             Content = new ScrollView
             {
-                Content = stackLayout
+                Content = stackLayout,
+                BackgroundColor = Color.Red
+                // , Orientation = ScrollOrientation.Horizontal,
             };
         }
 
@@ -70,6 +77,7 @@ namespace ReflectedColors
                 TextColor = color,
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 BackgroundColor = backgroundColor
+                    , HorizontalOptions = LayoutOptions.Start
             };
         }
     }
