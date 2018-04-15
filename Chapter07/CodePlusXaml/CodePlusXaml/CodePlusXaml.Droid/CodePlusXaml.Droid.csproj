@@ -24,7 +24,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +123,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CodePlusXaml\CodePlusXaml.csproj">
       <Name>CodePlusXaml</Name>
+      <Project>{4D32C043-2079-45DF-B303-EDA51A1E25BC}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
