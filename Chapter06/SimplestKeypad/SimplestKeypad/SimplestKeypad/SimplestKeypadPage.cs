@@ -5,6 +5,7 @@ namespace SimplestKeypad
 {
     public class SimplestKeypadPage : ContentPage
     {
+        private const string Key = "displayLabelText";
         Label displayLabel;
         Button backspaceButton;
 
@@ -67,6 +68,12 @@ namespace SimplestKeypad
             }
 
             this.Content = mainStack;
+            var properties = Application.Current.Properties;
+            if(properties.ContainsKey(Key))
+            {
+                displayLabel.Text = properties[Key] as string;
+                backspaceButton.IsEnabled = displayLabel.Text.Length > 0;
+            }
         }
 
         void OnDigitButtonClicked(object sender, EventArgs args)
@@ -74,6 +81,8 @@ namespace SimplestKeypad
             Button button = (Button)sender;
             displayLabel.Text += (string)button.StyleId;
             backspaceButton.IsEnabled = true;
+            //Persistence
+            Application.Current.Properties[Key] = displayLabel.Text;
         }
 
         void OnBackspaceButtonClicked(object sender, EventArgs args)
@@ -81,6 +90,8 @@ namespace SimplestKeypad
             string text = displayLabel.Text;
             displayLabel.Text = text.Substring(0, text.Length - 1);
             backspaceButton.IsEnabled = displayLabel.Text.Length > 0;
+            //Persistence
+            Application.Current.Properties[Key] = displayLabel.Text;
         }
     }
 }
