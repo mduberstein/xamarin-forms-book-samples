@@ -9,8 +9,9 @@ namespace AccessibilityTest
         {
             Label testLabel = new Label
             {
-                Text = "FontSize of 20",
+                Text = "FontSize of 20" + Environment.NewLine + "20 characters across",
                 FontSize = 20,
+                HorizontalTextAlignment = TextAlignment.Center,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions =  LayoutOptions.CenterAndExpand
             };
