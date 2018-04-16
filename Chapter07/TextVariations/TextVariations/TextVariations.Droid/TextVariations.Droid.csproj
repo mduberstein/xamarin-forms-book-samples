@@ -24,7 +24,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +123,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TextVariations\TextVariations.csproj">
       <Name>TextVariations</Name>
+      <Project>{B064170D-572B-4E03-84C6-093F9FB9C63C}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

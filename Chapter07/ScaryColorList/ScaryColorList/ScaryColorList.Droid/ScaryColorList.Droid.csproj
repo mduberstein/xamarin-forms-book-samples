@@ -24,7 +24,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,6 +125,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ScaryColorList\ScaryColorList.csproj">
       <Name>ScaryColorList</Name>
+      <Project>{5DC752C5-EFE5-4AA2-A80B-32C2A3D80DA4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
