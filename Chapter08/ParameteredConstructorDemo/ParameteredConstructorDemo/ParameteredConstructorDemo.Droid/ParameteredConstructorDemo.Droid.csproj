@@ -24,7 +24,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,6 +125,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ParameteredConstructorDemo\ParameteredConstructorDemo.csproj">
       <Name>ParameteredConstructorDemo</Name>
+      <Project>{DBD4A419-F388-48D0-9794-6463C65FE302}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

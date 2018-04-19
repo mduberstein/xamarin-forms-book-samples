@@ -24,7 +24,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +123,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PlatformSpecificLabels\PlatformSpecificLabels.csproj">
       <Name>PlatformSpecificLabels</Name>
+      <Project>{63739427-C0FE-4E87-AC6A-F7E11D141745}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
