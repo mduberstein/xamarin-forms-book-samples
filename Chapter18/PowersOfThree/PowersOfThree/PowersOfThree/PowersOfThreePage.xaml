@@ -29,9 +29,8 @@
                    Text="{Binding Power, StringFormat=' = {0}'}" />
         </StackLayout>
 
-        <StackLayout Orientation="Horizontal"
+<!--        <StackLayout Orientation="Horizontal"
                      VerticalOptions="CenterAndExpand">
-
             <Button Text="Increase"
                     Command="{Binding IncreaseExponentCommand}"
                     HorizontalOptions="CenterAndExpand" />
@@ -39,6 +38,27 @@
             <Button Text="Decrease"
                     Command="{Binding DecreaseExponentCommand}"
                     HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="CenterAndExpand">
+            <Frame OutlineColor="Accent"
+                   BackgroundColor="Transparent"
+                   Padding="20, 40"
+                   HorizontalOptions="CenterAndExpand">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding IncreaseExponentCommand}" />
+                </Frame.GestureRecognizers>
+                <Label Text="Increase"
+                       FontSize="Large" />
+            </Frame>
+            <Frame OutlineColor="Accent"
+                   BackgroundColor="Transparent"
+                   Padding="20, 40" 
+                   HorizontalOptions="CenterAndExpand">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DecreaseExponentCommand}" />
+                </Frame.GestureRecognizers> <Label Text="Decrease" FontSize="Large" />
+            </Frame>
         </StackLayout>
     </StackLayout>
 </ContentPage>
