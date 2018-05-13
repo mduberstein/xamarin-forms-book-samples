@@ -10,11 +10,27 @@
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
         
+<!--        <Image Source="{local:ImageResource StackedBitmap.Images.Sculpture_320x240.jpg}"
+               WidthRequest="1000"
+               BackgroundColor="Aqua"
+               SizeChanged="OnImageSizeChanged" />-->
+<!--        <Image Source="{local:ImageResource StackedBitmap.Images.Sculpture_320x240.jpg}"
+               WidthRequest="1000"
+               HorizontalOptions="Center"
+               BackgroundColor="Aqua"
+               SizeChanged="OnImageSizeChanged" />-->
+        
+<!--        <Image Source="{local:ImageResource StackedBitmap.Images.Sculpture_320x240.jpg}"
+               HeightRequest="400"
+               BackgroundColor="Aqua"
+               SizeChanged="OnImageSizeChanged" />-->
+        
         <Image Source="{local:ImageResource StackedBitmap.Images.Sculpture_320x240.jpg}"
-<!--               HorizontalOptions="Center"-->
+               HeightRequest="240"
+               WidthRequest="320"
+               HorizontalOptions="Center"
                BackgroundColor="Aqua"
                SizeChanged="OnImageSizeChanged" />
-
         <Label x:Name="label"
                FontSize="Medium"
                VerticalOptions="CenterAndExpand"
