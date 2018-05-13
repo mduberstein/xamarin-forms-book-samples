@@ -11,6 +11,7 @@
                HorizontalOptions="Center" />
         
         <Image Source="{local:ImageResource StackedBitmap.Images.Sculpture_320x240.jpg}"
+<!--               HorizontalOptions="Center"-->
                BackgroundColor="Aqua"
                SizeChanged="OnImageSizeChanged" />
 
