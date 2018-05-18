@@ -6,12 +6,22 @@
 
     <StackLayout>
         <AbsoluteLayout VerticalOptions="FillAndExpand">
-            <Editor x:Name="editor"
+			<Editor x:Name="editor"
                     Keyboard="Text"
-                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.5"
                     AbsoluteLayout.LayoutFlags="All"
                     Focused="OnEditorFocused"
-                    Unfocused="OnEditorUnfocused" />
+                    Unfocused="OnEditorUnfocused" 
+					BackgroundColor="Yellow"
+					TextColor="Accent"/>
+            <Editor x:Name="editor1"
+                    Keyboard="Text"
+                    AbsoluteLayout.LayoutBounds="0, 0.5, 1, 0.5"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Focused="OnEditorFocused"
+                    Unfocused="OnEditorUnfocused" 
+					BackgroundColor="Green"
+					TextColor="Accent"/>
         </AbsoluteLayout>
     </StackLayout>
 </ContentPage>

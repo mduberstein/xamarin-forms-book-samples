@@ -21,9 +21,18 @@ namespace JustNotes
 
         void OnEditorFocused(object sender, FocusEventArgs args)
         {
+			var currentEditor = (Editor)sender;
+			bool isEditorCurrent = currentEditor.Equals(editor);
+			double currentEditorHeight = 0.1;
+			double theOtherEditorHeight = 0.2 - currentEditorHeight;
+
+			double editorHeight = isEditorCurrent ? currentEditorHeight : theOtherEditorHeight;
+			double editor1Height = 0.2 - editorHeight;
             if (Device.RuntimePlatform == Device.iOS)
             {
-                AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, 0.5));
+                //AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, 0.5));
+				AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, editorHeight));
+				AbsoluteLayout.SetLayoutBounds(editor1, new Rectangle(0, editorHeight, 1, editor1Height));
             }
         }
 
@@ -31,7 +40,9 @@ namespace JustNotes
         {
             if (Device.RuntimePlatform == Device.iOS)
             {
-                AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, 1));
+                //AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, 1));
+				AbsoluteLayout.SetLayoutBounds(editor, new Rectangle(0, 0, 1, .5));
+				AbsoluteLayout.SetLayoutBounds(editor1, new Rectangle(0, .5, 1, .5));
             }
         }
 
