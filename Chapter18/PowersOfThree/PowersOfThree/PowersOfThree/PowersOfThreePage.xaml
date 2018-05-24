@@ -57,7 +57,8 @@
                    HorizontalOptions="CenterAndExpand">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding DecreaseExponentCommand}" />
-                </Frame.GestureRecognizers> <Label Text="Decrease" FontSize="Large" />
+                </Frame.GestureRecognizers>
+				<Label Text="Decrease" FontSize="Large" />
             </Frame>
         </StackLayout>
     </StackLayout>

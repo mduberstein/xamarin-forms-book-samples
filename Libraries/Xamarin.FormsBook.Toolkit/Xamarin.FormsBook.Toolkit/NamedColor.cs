@@ -72,5 +72,9 @@ namespace Xamarin.FormsBook.Toolkit
         }
 
         public static IList<NamedColor> All { private set; get; }
-    }
+
+		//public override string ToString() {
+		//	return FriendlyName;
+		//}
+	}
 }
