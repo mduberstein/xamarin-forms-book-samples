@@ -9,7 +9,9 @@ namespace AbsoluteDemo
         {
             AbsoluteLayout absoluteLayout = new AbsoluteLayout
             {
-                Padding = new Thickness(50)
+                Padding = new Thickness(50),
+				BackgroundColor = Color.Yellow,
+				VerticalOptions = LayoutOptions.Center
             };
 
             absoluteLayout.Children.Add(
