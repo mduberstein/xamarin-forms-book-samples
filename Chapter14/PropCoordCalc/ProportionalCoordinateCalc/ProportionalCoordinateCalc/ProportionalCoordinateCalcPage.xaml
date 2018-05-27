@@ -13,6 +13,7 @@
         <AbsoluteLayout x:Name="absoluteLayout"
                         BackgroundColor="Pink"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center" />
+                        VerticalOptions="Center"
+                        SizeChanged="OnAbsoluteLayoutSizeChanged"/>
     </ContentView>
 </ContentPage>
