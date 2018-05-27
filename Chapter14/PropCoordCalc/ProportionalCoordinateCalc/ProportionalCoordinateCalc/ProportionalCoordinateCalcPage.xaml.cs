@@ -1,10 +1,15 @@
 using System;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace ProportionalCoordinateCalc
 {
     public partial class ProportionalCoordinateCalcPage : ContentPage
-    {
+    { 
+		int countAbsLayoutSizeChanged = 0;
+        int countContentViewSizeChanged = 0;
+        int countPageSizeChanged = 0;
+
         public ProportionalCoordinateCalcPage()
         {
             InitializeComponent();
@@ -44,14 +49,34 @@ namespace ProportionalCoordinateCalc
             }
         }
 
+		void OnAbsoluteLayoutSizeChanged(object sender, EventArgs eventArgs)
+        {
+            var absLayout = (AbsoluteLayout)sender;
+            System.Diagnostics.Debug.WriteLine($"In {nameof(OnAbsoluteLayoutSizeChanged)}: count={countAbsLayoutSizeChanged++}, X={absLayout.X}, Y={absLayout.Y}," +
+                                               $" Width={absLayout.Width}, Height={absLayout.Height}");
+        }
+
         void OnContentViewSizeChanged(object sender, EventArgs args)
         {
             ContentView contentView = (ContentView)sender;
+			Debug.WriteLine($"In {nameof(OnContentViewSizeChanged)}: count={countContentViewSizeChanged++}, X={contentView.X}, Y={contentView.Y}," +
+                       $" Width={contentView.Width}, Height={contentView.Height}");
+
+
 
             // Figure has an aspect ratio of 2:1
             double height = Math.Min(contentView.Width / 2, contentView.Height);
             absoluteLayout.WidthRequest = 2 * height;
             absoluteLayout.HeightRequest = height;
+        }
+
+		void OnPageSizeChanged(object sender, EventArgs eventArgs)
+        {
+            var page = (ProportionalCoordinateCalcPage)sender;
+            Debug.WriteLine($"In {nameof(OnPageSizeChanged)}: count={countPageSizeChanged++}, X={page.X}, Y={page.Y}," +
+                                               $" Width={page.Width}, Height={page.Height}");
+            //var callStack = new System.Diagnostics.Debug.StackTrace();
+            //System.Diagnostics.Debug.WriteLine($"StackTrace: {Environment.StackTrace}");
         }
     }
 }
