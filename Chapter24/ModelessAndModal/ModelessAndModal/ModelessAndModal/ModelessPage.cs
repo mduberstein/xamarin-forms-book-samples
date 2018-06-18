@@ -9,6 +9,16 @@ namespace ModelessAndModal
         {
             Title = "Modeless Page";
 
+			// NavigationPage.SetHasBackButton(this, false);
+			// NavigationPage.SetHasNavigationBar(this, false);
+
+			//obsolete
+			if (Device.OS == TargetPlatform.iOS || Device.OS == TargetPlatform.Android)
+				NavigationPage.SetTitleIcon(this, "ic_action_flash_on.png");
+
+			//if(Device.RuntimePlatform == "IOS" || Device.RuntimePlatform == "Android"){
+			//	NavigationPage.SetiTitleIcon(this, "ic_action_flash_on.png");
+			//}
             Button goBackButton = new Button
             {
                 Text = "Back to Main",

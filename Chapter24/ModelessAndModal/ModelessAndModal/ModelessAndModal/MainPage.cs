@@ -9,6 +9,9 @@ namespace ModelessAndModal
         {
             Title = "Main Page";
 
+
+			NavigationPage.SetBackButtonTitle(this, "go back");
+
             Button gotoModelessButton = new Button
             {
                 Text = "Go to Modeless Page",

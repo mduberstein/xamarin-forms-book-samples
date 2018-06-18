@@ -11,7 +11,11 @@ namespace ModelessAndModal
     {
         public App()
         {
-            MainPage = new NavigationPage(new MainPage());
+			MainPage = new NavigationPage(new MainPage())
+			{
+				BarBackgroundColor = Color.Blue, 
+				BarTextColor = Color.Pink
+			};
         }
 
         protected override void OnStart()
