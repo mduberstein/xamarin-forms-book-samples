@@ -117,7 +117,9 @@ namespace Xamarin.FormsBook.Toolkit
 
             if (visibleChildCount == 0)
             {
-                return new SizeRequest();
+				var sizeRequest = new SizeRequest();
+				return sizeRequest;
+				//return new SizeRequest();
             }
             else if (Orientation == StackOrientation.Vertical)
             {
