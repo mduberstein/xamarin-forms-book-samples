@@ -119,6 +119,8 @@ namespace SinglePageNavigation
                                                  ShowStack(modStack));
 
             // Enable and disable buttons based on the counts.
+			// MIKE: the part after || is most likely redundant, since the bug, see X sign
+			// and discrepancy explanation on p. 945 of the book, has likely been fixed since
             bool noModals = modalCount == 0 || (modalCount == 1 && modStack[0] is NavigationPage);
 
             modelessGoToButton.IsEnabled = noModals;

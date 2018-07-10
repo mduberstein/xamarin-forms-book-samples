@@ -5,6 +5,7 @@ namespace ModalEnforcement
 {
     public partial class ModalEnforcementHomePage : ContentPage
     {
+		ModalEnforcementModalPage modalPage = new ModalEnforcementModalPage();
         public ModalEnforcementHomePage()
         {
             InitializeComponent();
@@ -12,7 +13,8 @@ namespace ModalEnforcement
 
         async void OnGoToButtonClicked(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new ModalEnforcementModalPage());
-        }
+            //await Navigation.PushModalAsync(new ModalEnforcementModalPage());
+			await Navigation.PushModalAsync(modalPage);
+		}
     }
 }
