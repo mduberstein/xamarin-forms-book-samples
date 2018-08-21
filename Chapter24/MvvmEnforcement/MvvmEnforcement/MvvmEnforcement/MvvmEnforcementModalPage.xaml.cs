@@ -8,8 +8,8 @@ namespace MvvmEnforcement
         public MvvmEnforcementModalPage()
         {
             InitializeComponent();
-
-            LittleViewModel viewModel = new LittleViewModel();
+			LittleViewModel viewModel = ((App)Application.Current).ViewModel;
+            //LittleViewModel viewModel = new LittleViewModel();
             BindingContext = viewModel;
 
             // Populate Picker Items list.

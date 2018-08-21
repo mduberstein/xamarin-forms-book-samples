@@ -5,8 +5,11 @@ namespace MvvmEnforcement
 {
     public class App : Application
     {
+
+		public LittleViewModel ViewModel { get; private set; }
         public App()
         {
+			ViewModel = new LittleViewModel();
             MainPage = new NavigationPage(new MvvmEnforcementHomePage());
         }
 

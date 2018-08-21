@@ -20,7 +20,7 @@ namespace MvvmEnforcement
                 if (name != value)
                 {
                     name = value;
-                    OnPropertyChanged("Name");
+					OnPropertyChanged(nameof(Name));
                     TestIfValid();
                 }
             }
@@ -53,12 +53,12 @@ namespace MvvmEnforcement
                 if (languageIndex != value)
                 {
                     languageIndex = value;
-                    OnPropertyChanged("LanguageIndex");
+					OnPropertyChanged(nameof(LanguageIndex));
 
                     if (languageIndex >= 0 && languageIndex < languages.Length)
                     {
                         Language = languages[languageIndex];
-                        OnPropertyChanged("Language");
+						OnPropertyChanged(nameof(Language));
                     }
                     TestIfValid();
                 }
@@ -75,7 +75,7 @@ namespace MvvmEnforcement
                 if (isValid != value)
                 {
                     isValid = value;
-                    OnPropertyChanged("IsValid");
+					OnPropertyChanged(nameof(IsValid));
                 }
             }
             get { return isValid; }
