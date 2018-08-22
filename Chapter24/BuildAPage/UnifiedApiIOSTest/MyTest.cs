@@ -20,5 +20,12 @@ namespace UnifiedApiIOSTest {
 		public void Ignore() {
 			Assert.True(false);
 		}
+
+		[TestCase(0.21, "0.21")]
+		public void CompareDoubleAndStringTest(double valDouble, string valString){
+			string valToString = valDouble.ToString();
+			Assert.IsTrue(valToString.Equals(valString, StringComparison.InvariantCultureIgnoreCase));
+
+		}
 	}
 }

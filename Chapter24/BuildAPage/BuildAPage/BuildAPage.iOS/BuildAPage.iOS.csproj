@@ -100,6 +100,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BuildAPage\BuildAPage.csproj">
       <Name>BuildAPage</Name>
+      <Project>{4868CABB-78F9-4AEA-AB54-D4DA91391EDD}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
