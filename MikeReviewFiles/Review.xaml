@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="ModalEnforcement.ModalEnforcementModalPage" 
+			 Title="Modal Page">
+	<StackLayout Padding="20, 0">
+		<Entry x:Name="entry1" VerticalOptions="LayoutOptions.CenterAndExpand" HorizontalOptions="Center" Text="" />
+		<Switch x:Name="switch1" isVisible="False">
+			<Switch.DataTriggers>
+				<DataTrigger TargetType="Switch" 
+							 Binding="{Binding Source={x:Reference entry1}, Path=Text.Length}"
+							 Value="0">
+					<Setter Property="IsToggled" Value="True"/>
+				</DataTrigger>
+			</Switch.DataTriggers>
+		</Switch>
+		<Picker x:Name = "picker"
+				Title = "Favorite Language"
+				VerticalOptions="CenterAndExpand">
+			<Picker.Items>
+				<x:String>C#</x:String>
+				<x:String>F#</x:String>
+			</Picker.Items>
+		</Picker>
+		<Switch x:Name="switch3" isVisible="False">
+			<Switch.Triggers>
+				<DataTrigger TargetType="Switch"
+							 Binding="{Binding Source={x:Reference Picker}, Path=SelectedIndex}"
+							 Value = -1>
+					<Setter Propety="IsToggled" Value="True"
+				</DataTrigger>
+			</Switch.Triggers>
+		</Switch>
+
+		<Button x:Name="doneButton"
+				Text="Done"
+				IsEnabled="False"
+				HorizondalOptions="Center"
+				VerticalOptions="CenterAndExpand"
+				Clicked="OnDoneButtonClicked">
+			<Button.Triggers>
+				<MultiTrigger TargetType="Button">
+					<BindingCondition Binding="{Binding Source={x:Reference switch1}, Path=IsToggled}"
+									  Value="False"/>
+					<BindingCondition Binding="{Binding Source={x:Reference switch3}, PathIsToggled}"
+									  Value ="False"/>
+					<Setter Property="IsEnabled" Value"True"/>
+				</MultiTrigger>
+			</Button.Triggers>
+		</Button>
+		
+	</StackLayout>
+</ContentPage>
