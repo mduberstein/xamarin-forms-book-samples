@@ -7,7 +7,8 @@ namespace DataTransfer3
     public partial class DataTransfer3HomePage : ContentPage
     {
         ObservableCollection<Information> list = new ObservableCollection<Information>();
-
+		//MD:
+		DataTransfer3InfoPage infoPage;
         public DataTransfer3HomePage()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace DataTransfer3
         // Button Clicked handler.
         async void OnGetInfoButtonClicked(object sender, EventArgs args)
         {
-            DataTransfer3InfoPage infoPage = new DataTransfer3InfoPage();
+            
+			//DataTransfer3InfoPage infoPage = new DataTransfer3InfoPage();
+			infoPage = new DataTransfer3InfoPage();
             await Navigation.PushAsync(infoPage);
 
             // Set event handler for obtaining information.
@@ -57,6 +60,8 @@ namespace DataTransfer3
             {
                 list.Add(info);
             }
+			//MD: should work for IOS and Android, I don't care about Windows
+			infoPage.InformationReady -= OnInfoPageInformationReady;
         }
     }
 }
